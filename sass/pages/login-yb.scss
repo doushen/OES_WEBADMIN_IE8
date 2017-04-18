@@ -1,0 +1,238 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+body, button, input, select, textarea {
+    font: 12px/1.5     tahoma,arial,\5b8b\4f53;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+code, kbd, pre, samp {
+    font-family: courier new,courier,monospace;
+}
+
+small, html {
+    font-size: 14px;
+    font-family: "微软雅黑";
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+legend {
+    color: #000;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.fr {
+    float: right;
+}
+
+/*html {
+    font-size: calc(100vw/3.75);
+}*/
+
+header {
+    height: 80px;
+    margin-left: 5%;
+}
+
+.head {
+    height: 43px;
+    width: 187px;
+    padding-top: 15px;
+    img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.con {
+    background: url("../../pages/img/login/bg-yb.jpg") no-repeat center;
+    min-height: 480px;
+    position: relative;
+}
+
+.login {
+    height: 320px;
+    width: 310px;
+    background: #fff;
+    position: absolute;
+    right: 15%;
+    top: 100px;
+}
+
+.l_con {
+    margin: 0 4%;
+}
+
+.l_text {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+}
+
+.l_input {
+    margin-top: 45px;
+    input {
+        border: 0;
+        border-bottom: 1px solid #c0c0c0;
+        height: 43px;
+        line-height: 45px;
+        width: 100%;
+    }
+}
+
+.l_btn {
+    height: 36px;
+    background: #3c448d;
+    width: 100%;
+    border: 0;
+    color: #fff;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.l_con a{
+    color: #fff;
+}
+.cz {
+    margin-top: 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    margin-top: 70px;
+    color: #666666;
+    font-size: 14px;
+}
+
+/*!*为大屏幕设备 pc *!*/
+@media all and (min-width: 1200px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    html {
+        font-size: 90% !important;
+    }
+    header {
+        height: 72px;
+    }
+    .head img {
+        height: 90%;
+        width: 90%;
+    }
+    .login {
+        height: 288px;
+        width: 279px;
+        position: absolute;
+        right: 13.5%;
+        top: 90px;
+    }
+    .l_text {
+        font-size: 17px;
+    }
+    .l_input {
+        margin-top: 40.5px;
+    }
+    .l_btn {
+        margin-top: 45px;
+        height: 32.4px;
+    }
+    .con {
+        min-height: 432px;
+    }
+    .cz {
+        margin-top: 9px;
+    }
+    footer {
+        margin-top: 63px;
+    }
+}
+
+@media only screen and (max-width: 959px) {
+    html {
+        font-size: 80% !important;
+    }
+    header {
+        height: 64px;
+    }
+    .head img {
+        height: 80%;
+        width: 80%;
+    }
+    .login {
+        height: 256px;
+        width: 248px;
+        position: absolute;
+        right: 12%;
+        top: 80px;
+    }
+    .l_text {
+        font-size: 16px;
+    }
+    .l_input {
+        margin-top: 25px;
+    }
+    .l_btn {
+        margin-top: 30px;
+        height: 32.4px;
+    }
+    .con {
+        min-height: 384px;
+    }
+    .cz {
+        margin-top: 8px;
+    }
+    footer {
+        margin-top: 54px;
+    }
+}
+
+/*
+@media only screen and (min-width: 480px) and (max-width: 767px){
+
+}
+@media only screen and (max-width: 479px){
+
+}*/
