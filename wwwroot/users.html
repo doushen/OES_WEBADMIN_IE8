@@ -1,0 +1,272 @@
+<!doctype html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="shortcut icon" href="example/favicon.ico" />
+	<title></title>
+	<!--
+    JQuery EasyUI 1.5.x of Insdep Theme 1.0.0 RC2
+    演示地址：https://www.insdep.com/example/
+    下载地址：https://www.insdep.com
+    问答地址：https://bbs.insdep.com
+
+    项目地址：http://git.oschina.net/weavors/JQuery-EasyUI-1.5.x-Of-Insdep-Theme
+
+    QQ交流群：184075694 （优先发布更新主题及内测包）
+-->
+	<!--
+	注意样式表优先级
+    主题样式必须在easyui组件样式后。
+-->
+	<link href="/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/global/plugins/jquery-easyui/themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+
+	<link href="/assets/global/plugins/jquery-easyui/themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+	<link href="/assets/global/plugins/jquery-easyui/themes/insdep/icon.css" rel="stylesheet" type="text/css">
+	<link href="/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="p" class="easyui-panel" title="查询" style="padding:10px;"
+			data-options="collapsible:true,minimizable:false,maximizable:false,closable:false,border:false">
+		<form id="ff" class="easyui-form" method="post" data-options="novalidate:true" style="line-height:40px;">
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-sm-3 col-xs-6">
+				<input class="easyui-textbox theme-textbox-radius" type="text" name="name" data-options="prompt:'编号',required:true" style="" />
+			</div>
+			<div class="col-xs-12 text-center">
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="list.submitForm()">查询</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="list.clearForm()">重置</a>
+			</div>
+		</form>
+	</div>
+
+	<table id="table" style="height:500px;" data-options="">
+		<thead>
+			<tr>
+				<th data-options="field:'ck',checkbox:true"></th>
+				<th data-options="field:'itemid',width:80">编号</th>
+				<th data-options="field:'productid',width:100,formatter:list.text">名称</th>
+				<th data-options="field:'listprice',width:80,align:'center',formatter:list.listprice">总价</th>
+				<th data-options="field:'unitcost',width:160,align:'center',formatter:list.unitcost">单价</th>
+				<th data-options="field:'status',width:80,align:'center'">描述</th>
+				<th data-options="field:'attr1',width:120,align:'center',formatter:list.status">状态</th>
+				<th data-options="field:'operate',align:'center',formatter:list.operate">&nbsp;&nbsp;&nbsp;&nbsp;操作&nbsp;&nbsp;&nbsp;&nbsp;</th>
+				<th data-options="field:'button',width:120,align:'center',formatter:list.button"></th>
+			</tr>
+		</thead>
+	</table>
+
+	<div id="operate_menu" style="width:150px;">
+		<div data-options="name:'undo'">Undo</div>
+		<div data-options="name:'redo'">Redo</div>
+		<div class="menu-sep"></div>
+		<div data-options="name:'cut'">Cut</div>
+		<div data-options="name:'copy'">Copy</div>
+		<div data-options="name:'paste'">Paste</div>
+		<div class="menu-sep"></div>
+		<div data-options="name:'delete'">Delete</div>
+		<div>Select All</div>
+	</div>
+	<!--[if lt IE 9]>
+    <script src="/assets/global/plugins/respond.min.js"></script>
+    <script src="/assets/global/plugins/excanvas.min.js"></script> 
+    <script src="/assets/global/plugins/ie8.fix.min.js"></script> 
+    <![endif]-->
+	<script src="/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/assets/global/plugins/jquery-easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/assets/global/plugins/jquery-easyui/themes/insdep/jquery.insdep-extend.min.js"></script>
+	<script type="text/javascript" src="/assets/global/plugins/iframeWin/jquery.iframeWin.js"></script>
+	<script type="text/javascript">
+	// 用户列表对象
+	var list = {};
+	// 确认删除
+	list.confirmDel = function() {
+        $.messager.confirm('提示', '是否确认删除?', function(r){
+            if (r){
+                alert('确认: '+r);
+            }
+        });
+    };
+    // 编辑
+    list.editShow = function() {
+		$.iframe.win({
+            title: "编辑",
+            url: "edit.html",
+            maximizable: true,
+            width: 600,
+            height: 250,
+            modal: true
+        });
+        $.iframe.maximize();
+    };
+    // 翻译操作列
+	list.operate = function(value,row,index) {
+		return "<a href='javascript:void(0)' class='operate' data-options='value:"+value+",iconCls:\"icon-set\"'></a>";
+	};
+	// 翻译按钮列
+	list.button = function(value,row,index) {
+		return "<a href='#' onclick='list.confirmDel();' class='button-delete button-danger'>删除</a> <a href='#' onclick='list.editShow();' class='button-edit button-default'>编辑</a>";
+	};
+	// 翻译总价
+	list.listprice = function(value,row,index) {
+		return "<span class='block-success span-badge'>"+value+"</span>";
+	};
+	// 翻译单价
+	list.unitcost = function(value,row,index) {
+		var progressbar;
+		if(value<10){
+			progressbar="<div class='progressbar progressbar-green' data-options='value:"+value+"'>"+value+"</div>";
+		}else if(value>10&&value<30){
+			progressbar="<div class='progressbar progressbar-blue' data-options='value:"+value+"'>"+value+"</div>";
+		}else if(value>30&&value<50){
+			progressbar="<div class='progressbar' data-options='value:"+value+"'>"+value+"</div>";
+		}else if(value>50&&value<80){
+			progressbar="<div class='progressbar progressbar-yellow' data-options='value:"+value+"'>"+value+"</div>";
+		}else{
+			progressbar="<div class='progressbar progressbar-red' data-options='value:"+value+"'>"+value+"</div>";
+		}
+		
+		return progressbar;
+	};
+	// 翻译状态
+	list.status = function(value,row,index) {
+		return "<input class='switchbutton'>";
+	};
+	// 翻译输入框
+	list.text = function(value,row,index) {
+		return "<input class='text' value='"+value+"'>";
+	};
+		// 提交表单
+	list.submitForm = function() {
+        // $('#ff').form('submit',{
+        //     onSubmit:function(){
+        //         return $(this).form('enableValidation').form('validate');
+        //     }
+        // });
+    };
+    // 清除表单
+    list.clearForm = function() {
+        $('#ff').form('clear');
+    };
+	// 页面加载完成事件
+	$(function(){
+		// 模拟数据
+		var gridData = {"total":"28","rows":[
+{"itemid":"EST-1","productid":"FI-SW-01","listprice":"16.50","unitcost":"5.00","status":"P","attr1":"Large","operate":"1","button":"1"},
+{"itemid":"EST-10","productid":"K9-DL-01","listprice":"18.50","unitcost":"17.00","status":"P","attr1":"Spotted Adult Female","operate":"10","button":"1"},
+{"itemid":"EST-11","productid":"RP-SN-01","listprice":"18.50","unitcost":"55.00","status":"P","attr1":"Venomless","operate":"11","button":"1"},
+{"itemid":"EST-12","productid":"RP-SN-01","listprice":"18.50","unitcost":"31.00","status":"P","attr1":"Rattleless","operate":"12","button":"1"},
+{"itemid":"EST-13","productid":"RP-LI-02","listprice":"18.50","unitcost":"21.00","status":"P","attr1":"Green Adult","operate":"13","button":"1"},
+{"itemid":"EST-14","productid":"FL-DSH-01","listprice":"58.50","unitcost":"68.00","status":"P","attr1":"Tailless","operate":"14","button":"1"},
+{"itemid":"EST-15","productid":"FL-DSH-01","listprice":"23.50","unitcost":"66.00","status":"P","attr1":"With tail","operate":"15","button":"1"},
+{"itemid":"EST-16","productid":"FL-DLH-02","listprice":"93.50","unitcost":"97.00","status":"P","attr1":"Adult Female","operate":"16","button":"1"},
+{"itemid":"EST-17","productid":"FL-DLH-02","listprice":"93.50","unitcost":"48.00","status":"P","attr1":"Adult Male","operate":"17","button":"1"},
+{"itemid":"EST-18","productid":"AV-CB-01","listprice":"193.50","unitcost":"92.00","status":"P","attr1":"Adult Male","operate":"18","button":"1"}
+]};
+		// 表格初始化
+		$('#table').datagrid({
+			cls:"theme-datagrid", 
+		    // title:"用户列表",
+			singleSelect:true,
+			//showFooter:true,
+			cache:false,
+			rownumbers:true,//显示序号
+			pagination:true,
+			pageSize:10,
+			collapsible:true,
+			data: gridData,
+			// url:'datagrid_data4.json',
+			onLoadSuccess:function(){
+				$('.operate').menubutton({  
+					plain:false,  
+					menu: '#operate_menu'
+				}); 
+				$('#operate_menu').menu({
+					onClick:function(item){
+						
+						var a=$('.operate').menubutton("options");
+						switch (item.name)
+						{
+							case "undo":
+								alert("undo "+a.value);
+								break;
+							case "redo":
+								alert("redo "+a.value);
+							  	break;
+							case "cut":
+							  	alert("cut "+a.value);
+							  	break;
+							case "copy":
+							  	alert("copy "+a.value);
+							  	break;
+							case "paste":
+							  	alert("paste "+a.value);
+							  	break;
+							case "delete":
+							  	alert("delete "+a.value);
+							  	break;
+						}
+					}	
+				});
+
+				$('.progressbar').progressbar({}); 
+				
+				$('.switchbutton').switchbutton({ 
+				  height:23
+				});
+				
+				$('.button-delete').linkbutton({ 
+				});
+				$('.button-edit').linkbutton({ 
+				});
+				
+				$('.text').textbox({
+					width:70,
+					height:30
+				});
+				$('.operate-append,.operate-edit,.operate-delete').linkbutton({});
+				$('.operate-append').on('click', function(){    
+					var a=$(this).linkbutton("options");
+					alert("append "+a.value);
+				});   
+				$('.operate-edit').on('click', function(){    
+					var a=$(this).linkbutton("options");
+					alert("edit "+a.value);
+				});
+				$('.operate-delete').on('click', function(){    
+					var a=$(this).linkbutton("options");
+					alert("delete "+a.value);
+				}); 
+			}
+		});	
+	});
+
+
+	</script>
+</body>
+</html>

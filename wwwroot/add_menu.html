@@ -1,0 +1,748 @@
+<!doctype html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="shortcut icon" href="example/favicon.ico" />
+	<title></title>
+	<!--
+    JQuery EasyUI 1.5.x of Insdep Theme 1.0.0 RC2
+    演示地址：https://www.insdep.com/example/
+    下载地址：https://www.insdep.com
+    问答地址：https://bbs.insdep.com
+
+    项目地址：http://git.oschina.net/weavors/JQuery-EasyUI-1.5.x-Of-Insdep-Theme
+
+    QQ交流群：184075694 （优先发布更新主题及内测包）
+-->
+	<!--
+	注意样式表优先级
+    主题样式必须在easyui组件样式后。
+-->
+
+	<link href="/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/global/plugins/jquery-easyui/themes/insdep/easyui.css" rel="stylesheet" type="text/css">
+	<link href="/assets/global/plugins/jquery-easyui/themes/insdep/default_theme.css" rel="stylesheet" type="text/css">
+	<link href="/assets/global/css/iconfont/iconfont.css" rel="stylesheet" type="text/css" />
+	<link href="/assets/layouts/layout/css/custom.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/assets/pages/css/add_menu.css"/>
+</head>
+<body>
+	<!-- 选择关键词 -->
+	<div class="select-list col-md-6">
+		<h4 class="list-name"><span>1</span>选择关键词</h4>
+		<ul class="key-word-list">
+			<li matching="youji" class="col-xs-6 col-sm-2">邮寄</li>
+			<li matching="Statistics" class="col-xs-6 col-sm-2">统计</li>
+			<li matching="chaxun" class="col-xs-6 col-sm-2">查询</li>
+			<li matching="shenhe" class="col-xs-6 col-sm-2">审核</li>
+			<li matching="piliang" class="col-xs-6 col-sm-2">批量</li>
+			<li matching="daochu" class="col-xs-6 col-sm-2">导出</li>
+			<li matching="xueji" class="col-xs-6 col-sm-2">学籍</li>
+			<li matching="shuju" class="col-xs-6 col-sm-2">数据</li>
+			<li matching="guanli" class="col-xs-6 col-sm-2">管理</li>
+			<li matching="xuanke" class="col-xs-6 col-sm-2">选课</li>
+			<li matching="xuewei" class="col-xs-6 col-sm-2">学位</li>
+			<li matching="xinxi" class="col-xs-6 col-sm-2">信息</li>
+			<li matching="biye" class="col-xs-6 col-sm-2">毕业</li>
+			<li matching="duanxin" class="col-xs-6 col-sm-2">短信</li>
+			<li matching="gonggao" class="col-xs-6 col-sm-2">公告</li>
+			<li matching="ziyuan" class="col-xs-6 col-sm-2">资源</li>
+			<li matching="zhuangtai" class="col-xs-6 col-sm-2">状态</li>
+			<li matching="tongyong" class="col-xs-6 col-sm-2">通用</li>
+			<li matching="dashuju" class="col-xs-6 col-sm-2">大数据</li>
+			<li matching="lunwen" class="col-xs-6 col-sm-2">论文</li>
+			<li matching="ceshi" class="col-xs-6 col-sm-2">测试</li>
+			<li matching="yuyue" class="col-xs-6 col-sm-2">预约</li>
+			<li matching="kaoshi" class="col-xs-6 col-sm-2">考试</li>
+			<li matching="zhaosheng" class="col-xs-6 col-sm-2">招生</li>
+			<li matching="ruxue" class="col-xs-6 col-sm-2">入学</li>
+			<li matching="luqu" class="col-xs-6 col-sm-2">录取</li>
+			<li matching="baoming" class="col-xs-6 col-sm-2">报名</li>
+			<li matching="Cost" class="col-xs-6 col-sm-2">费用</li>
+			<li matching="wangyin" class="col-xs-6 col-sm-2">网上银行</li>
+			<li matching="jiesuan" class="col-xs-6 col-sm-2">结算</li>
+			<li matching="nianbao" class="col-xs-6 col-sm-2">年报</li>
+			<li matching="Setup" class="col-xs-6 col-sm-2">设置</li>
+			<li matching="LearningCenter" class="col-xs-6 col-sm-2">学习中心</li>
+			<li matching="moni" class="col-xs-6 col-sm-2">模拟</li>
+			<li matching="yewu" class="col-xs-6 col-sm-2">业务</li>
+			<li matching="achievement" class="col-xs-6 col-sm-2">成绩</li>
+			<li matching="xuanke" class="col-xs-6 col-sm-2">选课</li>
+			<li matching="jiaowu" class="col-xs-6 col-sm-2">教务</li>
+			<li matching="school" class="col-xs-6 col-sm-2">院校</li>
+			<li matching="yuxuan" class="col-xs-6 col-sm-2">预选</li>
+			<li matching="shouquan" class="col-xs-6 col-sm-2">授权</li>
+			<li matching="jishu" class="col-xs-6 col-sm-2">技术</li>
+			<li matching="zhaopian" class="col-xs-6 col-sm-2">照片</li>
+			<li matching="jiaoshi" class="col-xs-6 col-sm-2">教师</li>
+			<li matching="xuewu" class="col-xs-6 col-sm-2">学务</li>
+			<li matching="tongkao" class="col-xs-6 col-sm-2">统考</li>
+			<li matching="weixin" class="col-xs-6 col-sm-2">微信</li>
+			<li matching="hujiao" class="col-xs-6 col-sm-2">呼叫</li>
+			<li matching="yonghu" class="col-xs-6 col-sm-2">用户</li>
+		</ul>
+	</div>
+
+
+	<!-- 选择图标 -->
+	<div class="select-list col-md-6 position-list">
+		<h4 class="list-name"><span>2</span>选择图标</h4>
+		<ul class="icon_lists">
+			<li name="Cost">
+			    <i class="icon iconfont icon-iconfont-Cost"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="wangyin">
+			    <i class="icon iconfont icon-iconfont-wangyin"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jiesuan">
+			    <i class="icon iconfont icon-iconfont-jiesuan"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="nianbao">
+			    <i class="icon iconfont icon-iconfont-nianbao"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="Setup">
+			    <i class="icon iconfont icon-iconfont-Setup"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="LearningCenter">
+			    <i class="icon iconfont icon-iconfont-LearningCenter"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="moni">
+			    <i class="icon iconfont icon-iconfont-moni"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yewu">
+			    <i class="icon iconfont icon-iconfont-yewu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="achievement">
+			    <i class="icon iconfont icon-iconfont-achievement"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuanke">
+			    <i class="icon iconfont icon-iconfont-xuanke"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="school">
+			    <i class="icon iconfont icon-iconfont-school"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jiaowu">
+			    <i class="icon iconfont icon-iconfont-jiaowu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="dashuju">
+			    <i class="icon iconfont icon-iconfont-dashuju"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="lunwen">
+			    <i class="icon iconfont icon-iconfont-lunwen"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ceshi">
+			    <i class="icon iconfont icon-iconfont-ceshi"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="luqu">
+			    <i class="icon iconfont icon-iconfont-luqu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yuyue">
+			    <i class="icon iconfont icon-iconfont-yuyue"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="dashuju">
+			    <i class="icon iconfont icon-iconfont-baoming"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ruxue">
+			    <i class="icon iconfont icon-iconfont-ruxue"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="kaoshi">
+			    <i class="icon iconfont icon-iconfont-kaoshi"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yuxuan">
+			    <i class="icon iconfont icon-iconfont-yuxuan"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shouquan">
+			    <i class="icon iconfont icon-iconfont-shouquan"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="baoming">
+			    <i class="icon iconfont icon-iconfont-baoming1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jiesuan">
+			    <i class="icon iconfont icon-iconfont-jiesuan1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jishu">
+			    <i class="icon iconfont icon-iconfont-jishu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhaopian">
+			    <i class="icon iconfont icon-iconfont-zhaopian"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jiaoshi">
+			    <i class="icon iconfont icon-iconfont-jiaoshi"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuewu">
+			    <i class="icon iconfont icon-iconfont-xuewu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongkao">
+			    <i class="icon iconfont icon-iconfont-tongkao"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="weixin">
+			    <i class="icon iconfont icon-iconfont-weixin"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="hujiao">
+			    <i class="icon iconfont icon-iconfont-hujiao"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yonghu">
+			    <i class="icon iconfont icon-iconfont-yonghu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="youji">
+			    <i class="icon iconfont icon-iconfont-youji"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="youji">
+			    <i class="icon iconfont icon-iconfont-youji1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="youji">
+			    <i class="icon iconfont icon-iconfont-youji2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="youji">
+			    <i class="icon iconfont icon-iconfont-youji3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="Statistics">
+			    <i class="icon iconfont icon-iconfont-Statistics"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="Statistics">
+			    <i class="icon iconfont icon-iconfont-Statistics1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="Statistics">
+			    <i class="icon iconfont icon-iconfont-Statistics2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="Statistics">
+			    <i class="icon iconfont icon-iconfont-Statistics3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="chaxun">
+			    <i class="icon iconfont icon-iconfont-chaxun"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="chaxun">
+			    <i class="icon iconfont icon-iconfont-chaxun1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="chaxun">
+			    <i class="icon iconfont icon-iconfont-chaxun2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="chaxun">
+			    <i class="icon iconfont icon-iconfont-chaxun3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="chaxun">
+			    <i class="icon iconfont icon-iconfont-shenhe"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shenhe">
+			    <i class="icon iconfont icon-iconfont-shenhe1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shenhe">
+			    <i class="icon iconfont icon-iconfont-shenhe2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shenhe">
+			    <i class="icon iconfont icon-iconfont-shenhe3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shenhe">
+			    <i class="icon iconfont icon-iconfont-shenhe4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="piliang">
+			    <i class="icon iconfont icon-iconfont-piliang"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="piliang">
+			    <i class="icon iconfont icon-iconfont-piliang1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="piliang">
+			    <i class="icon iconfont icon-iconfont-piliang2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="piliang">
+			    <i class="icon iconfont icon-iconfont-piliang3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="daochu">
+			    <i class="icon iconfont icon-iconfont-daochu"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="daochu">
+			    <i class="icon iconfont icon-iconfont-daochu1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="daochu">
+			    <i class="icon iconfont icon-iconfont-daochu2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="daochu">
+			    <i class="icon iconfont icon-iconfont-daochu3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="daochu">
+			    <i class="icon iconfont icon-iconfont-daochu4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="daochu">
+			    <i class="icon iconfont icon-iconfont-daochu5"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xueji">
+			    <i class="icon iconfont icon-iconfont-xueji"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xueji">
+			    <i class="icon iconfont icon-iconfont-xueji1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xueji">
+			    <i class="icon iconfont icon-iconfont-xueji2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xueji">
+			    <i class="icon iconfont icon-iconfont-xueji3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shuju">
+			    <i class="icon iconfont icon-iconfont-shuju"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shuju">
+			    <i class="icon iconfont icon-iconfont-shuju1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shuju">
+			    <i class="icon iconfont icon-iconfont-shuju2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shuju">
+			    <i class="icon iconfont icon-iconfont-shuju3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="shuju">
+			    <i class="icon iconfont icon-iconfont-shuju4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="guanli">
+			    <i class="icon iconfont icon-iconfont-guanli"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="guanli">
+			    <i class="icon iconfont icon-iconfont-guanli1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="guanli">
+			    <i class="icon iconfont icon-iconfont-guanli2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="guanli">
+			    <i class="icon iconfont icon-iconfont-guanli3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuanke">
+			    <i class="icon iconfont icon-iconfont-xuanke1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuanke">
+			    <i class="icon iconfont icon-iconfont-xuanke2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuanke">
+			    <i class="icon iconfont icon-iconfont-xuanke3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuanke">
+			    <i class="icon iconfont icon-iconfont-xuanke4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuewei">
+			    <i class="icon iconfont icon-iconfont-xuewei"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuewei">
+			    <i class="icon iconfont icon-iconfont-xuewei1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuewei">
+			    <i class="icon iconfont icon-iconfont-xuewei2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuewei">
+			    <i class="icon iconfont icon-iconfont-xuewei3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xinxi">
+			    <i class="icon iconfont icon-iconfont-xinxi"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xinxi">
+			    <i class="icon iconfont icon-iconfont-xinxi1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xinxi">
+			    <i class="icon iconfont icon-iconfont-xinxi2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xinxi">
+			    <i class="icon iconfont icon-iconfont-xinxi3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="biye">
+			    <i class="icon iconfont icon-iconfont-biye"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="biye">
+			    <i class="icon iconfont icon-iconfont-biye1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="biye">
+			    <i class="icon iconfont icon-iconfont-biye2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="biye">
+			    <i class="icon iconfont icon-iconfont-biye4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin5"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="duanxin">
+			    <i class="icon iconfont icon-iconfont-duanxin6"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="gonggao">
+			    <i class="icon iconfont icon-iconfont-gonggao"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="gonggao">
+			    <i class="icon iconfont icon-iconfont-gonggao1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="gonggao">
+			    <i class="icon iconfont icon-iconfont-gonggao2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="gonggao">
+			    <i class="icon iconfont icon-iconfont-gonggao3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="gonggao">
+			    <i class="icon iconfont icon-iconfont-gonggao4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="gonggao">
+			    <i class="icon iconfont icon-iconfont-gonggao5"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ziyuan">
+			    <i class="icon iconfont icon-iconfont-ziyuan"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ziyuan">
+			    <i class="icon iconfont icon-iconfont-ziyuan1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ziyuan">
+			    <i class="icon iconfont icon-iconfont-ziyuan2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ziyuan">
+			    <i class="icon iconfont icon-iconfont-ziyuan3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ziyuan">
+			    <i class="icon iconfont icon-iconfont-ziyuan4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ziyuan">
+			    <i class="icon iconfont icon-iconfont-ziyuan5"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhuangtai">
+			    <i class="icon iconfont icon-iconfont-zhuangtai"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhuangtai">
+			    <i class="icon iconfont icon-iconfont-zhuangtai1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhuangtai">
+			    <i class="icon iconfont icon-iconfont-zhuangtai2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhuangtai">
+			    <i class="icon iconfont icon-iconfont-zhuangtai3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhuangtai">
+			    <i class="icon iconfont icon-iconfont-zhuangtai4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="biye">
+			    <i class="icon iconfont icon-iconfont-biye3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="baoming">
+			    <i class="icon iconfont icon-iconfont-baoming2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="dashuju">
+			    <i class="icon iconfont icon-iconfont-dashuju1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="baoming">
+			    <i class="icon iconfont icon-iconfont-baoming3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="kaoshi">
+			    <i class="icon iconfont icon-iconfont-kaoshi1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="baoming">
+			    <i class="icon iconfont icon-iconfont-baoming4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="kaoshi">
+			    <i class="icon iconfont icon-iconfont-kaoshi2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="lunwen">
+			    <i class="icon iconfont icon-iconfont-lunwen1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="luqu">
+			    <i class="icon iconfont icon-iconfont-luqu1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="lunwen">
+			    <i class="icon iconfont icon-iconfont-lunwen2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="lunwen">
+			    <i class="icon iconfont icon-iconfont-lunwen3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="luqu">
+			    <i class="icon iconfont icon-iconfont-luqu2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yuyue">
+			    <i class="icon iconfont icon-iconfont-yuyue1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yuyue">
+			    <i class="icon iconfont icon-iconfont-yuyue2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="hujiao">
+			    <i class="icon iconfont icon-iconfont-hujiao1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jishu">
+			    <i class="icon iconfont icon-iconfont-jishu1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="xuewu">
+			    <i class="icon iconfont icon-iconfont-xuewu1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="jiaoshi">
+			    <i class="icon iconfont icon-iconfont-jiaoshi1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="baoming">
+			    <i class="icon iconfont icon-iconfont-baoming5"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ceshi">
+			    <i class="icon iconfont icon-iconfont-ceshi1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ceshi">
+			    <i class="icon iconfont icon-iconfont-ceshi2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="kaoshi">
+			    <i class="icon iconfont icon-iconfont-kaoshi3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="luqu">
+			    <i class="icon iconfont icon-iconfont-luqu3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ceshi">
+			    <i class="icon iconfont icon-iconfont-ceshi3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="luqu">
+			    <i class="icon iconfont icon-iconfont-luqu4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ruxue">
+			    <i class="icon iconfont icon-iconfont-ruxue1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="yuyue">
+			    <i class="icon iconfont icon-iconfont-yuyue3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="ruxue">
+			    <i class="icon iconfont icon-iconfont-ruxue2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhaosheng">
+			    <i class="icon iconfont icon-iconfont-zhaosheng"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhaosheng">
+			    <i class="icon iconfont icon-iconfont-zhaosheng1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhaosheng">
+			    <i class="icon iconfont icon-iconfont-zhaosheng2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="zhaosheng">
+			    <i class="icon iconfont icon-iconfont-zhaosheng3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong1"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong2"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong3"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong4"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong5"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong6"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+			<li name="tongyong">
+			    <i class="icon iconfont icon-iconfont-tongyong7"></i>
+			    <i class="glyphicon glyphicon-ok icon-active-ok"></i>
+			</li>
+		</ul>
+	</div>
+
+	<div class="add-btn">
+		<a href="#" class="easyui-linkbutton button-default l-btn l-btn-small" group="" id="">
+			<span class="l-btn-left"><span class="l-btn-text">确定</span></span>
+		</a>
+	</div>
+
+	
+    <!--[if lt IE 9]>
+    <script src="/assets/global/plugins/respond.min.js"></script>
+    <script src="/assets/global/plugins/excanvas.min.js"></script> 
+    <script src="/assets/global/plugins/ie8.fix.min.js"></script> 
+    <![endif]-->
+
+	<script src="/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/assets/global/plugins/jquery-easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="/assets/global/plugins/jquery-easyui/themes/insdep/jquery.insdep-extend.min.js"></script>
+	<script type="text/javascript" src="/assets/global/plugins/iframeWin/jquery.iframeWin.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			console.log($('.panel-body-noborder').css('height'));
+			$('.key-word-list li').click(function(){
+				var search = $(this).attr('matching');
+				$(this).addClass('active').siblings().removeClass('active');
+				$('.icon_lists li').each(function(i){
+					var menuName = $(this).attr('name');
+					console.log(menuName.indexOf(search))
+					if(menuName.indexOf(search) != -1){
+						$(this).show()
+					}else{
+						$(this).hide();
+					}
+				})
+			});
+
+			$('.icon_lists li').click(function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+
+		})
+    </script>
+</body>
+</html>
