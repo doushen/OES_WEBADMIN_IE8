@@ -1,0 +1,72 @@
+/* Cubic Bezier Transition */
+.select-list {
+  padding: 30px 40px 20px 20px; }
+  .select-list .list-name span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border: 1px solid #676767;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #676767;
+    margin-right: 5px; }
+  .select-list .key-word-list {
+    margin-top: 20px; }
+    .select-list .key-word-list li {
+      padding: 5px 0;
+      margin: 1px;
+      background: #E7F1FD;
+      text-align: center; }
+    .select-list .key-word-list li.active {
+      background: #4c99bc;
+      color: #fff; }
+  .select-list .icon_lists {
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    overflow-y: auto; }
+    .select-list .icon_lists li {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      text-align: center;
+      line-height: 60px;
+      margin: 5px 0;
+      margin-right: 25px;
+      border: 1px solid #fff;
+      float: left;
+      overflow: hidden; }
+      .select-list .icon_lists li i.icon.iconfont {
+        font-size: 30px; }
+      .select-list .icon_lists li i.glyphicon.icon-active-ok {
+        display: none; }
+    .select-list .icon_lists li.active {
+      border-color: #4c99bc;
+      border-radius: 5px; }
+      .select-list .icon_lists li.active i.icon.iconfont {
+        color: #4c99bc; }
+      .select-list .icon_lists li.active i.glyphicon.icon-active-ok {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top: inherit;
+        right: 0;
+        padding: 2px;
+        background: #4c99bc;
+        color: #fff; }
+
+.select-list li {
+  cursor: pointer; }
+
+.select-list.position-list {
+  position: absolute;
+  top: 0;
+  bottom: 60px;
+  right: 0; }
+
+.add-btn {
+  position: fixed;
+  right: 50px;
+  bottom: 10px; }

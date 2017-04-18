@@ -1,0 +1,14 @@
+{
+  "name": "iframeWin",
+  "homepage": "https://github.com/tavenli/iframeWin",
+  "_release": "d58d1bc4fc",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "d58d1bc4fc7581fd475e8f4830c62b9922b73f4f"
+  },
+  "_source": "https://github.com/tavenli/iframeWin.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/tavenli/iframeWin.git",
+  "_direct": true
+}
